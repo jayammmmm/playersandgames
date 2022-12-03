@@ -26,20 +26,17 @@ import java.util.List;
 public class PlayerGameController {
 
   @FXML
+  public static ComboBox playerIdList;
+  @FXML
   public TextField datePlayed;
-
   @FXML
   public TextField score;
-
   @FXML
   public TextField playerrId;
-
   @FXML
   public TextField gameId;
-
   @FXML
   public Label gameDetailsAdded;
-
   @FXML
   public TableView<PlayerMaster> playerTableView;
   @FXML
@@ -50,14 +47,12 @@ public class PlayerGameController {
   public TableColumn<PlayerMaster, String> playerTableLastName;
   @FXML
   public TableColumn<PlayerMaster, String> playerTablePhoneNumber;
-
   @FXML
   public TableView<GameMaster> gameTableView;
   @FXML
   public TableColumn<GameMaster, String> gameTableId;
   @FXML
   public TableColumn<GameMaster, String> gameTableTile;
-
   @FXML
   public TableView<PlayerGameMaster> playerGameDetailTable;
   @FXML
@@ -72,41 +67,26 @@ public class PlayerGameController {
   public TableColumn<PlayerGameMaster, String> playerGameTablePlayedOn;
   @FXML
   public TextField playerGameId;
-
-
   @FXML
-  private  Label gameAdded;
-
+  private Label gameAdded;
   @FXML
   private Label playerAdded;
-
   @FXML
   private TextField playerId;
-
   @FXML
   private TextField firstName;
-
   @FXML
   private TextField lastName;
-
   @FXML
   private TextField address;
-
   @FXML
   private TextField province;
-
   @FXML
   private TextField postalCode;
-
   @FXML
   private TextField phoneNumber;
-
   @FXML
   private TextField gameTitle;
-
-  @FXML
-  public static ComboBox playerIdList;
-
   @FXML
   private ObservableList playerIds = FXCollections
     .observableArrayList(Queries.getAllPlayerIds());
@@ -201,7 +181,7 @@ public class PlayerGameController {
 
     ObservableList<GameMaster> gameData = FXCollections.observableArrayList();
 
-    for(Game game: games) {
+    for (Game game : games) {
       GameMaster gameMaster = new GameMaster();
       gameMaster.setGameTableId(game.getGame_id());
       gameMaster.setGameTableTitle(game.getGame_title());
@@ -218,7 +198,7 @@ public class PlayerGameController {
     List<Player> players = Queries.getAllPlayers();
 
     ObservableList<PlayerMaster> playerData = FXCollections.observableArrayList();
-    for(Player player : players) {
+    for (Player player : players) {
       PlayerMaster playerMaster = new PlayerMaster();
       playerMaster.setPlayerTablePlayerId(player.getPlayer_id());
       playerMaster.setPlayerTableFirstName(player.getFirst_name());
@@ -238,7 +218,7 @@ public class PlayerGameController {
     List<DisplayRecordDto> playerGamess = Queries.getRecordsByPlayerId(Integer.parseInt(playerGameId.getText()));
 
     ObservableList<PlayerGameMaster> playerData = FXCollections.observableArrayList();
-    for(DisplayRecordDto player : playerGamess) {
+    for (DisplayRecordDto player : playerGamess) {
       PlayerGameMaster playerMaster = new PlayerGameMaster();
       playerMaster.setPlayerGameTableFirstName(player.getFirst_name());
       playerMaster.setPlayerGameTableLastName(player.getLast_name());

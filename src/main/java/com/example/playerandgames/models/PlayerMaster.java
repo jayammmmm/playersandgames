@@ -14,47 +14,47 @@ public class PlayerMaster {
     return playerTablePlayerId.get();
   }
 
-  public SimpleIntegerProperty playerTablePlayerIdProperty() {
-    return playerTablePlayerId;
-  }
-
   public void setPlayerTablePlayerId(int playerTablePlayerId) {
     this.playerTablePlayerId.set(playerTablePlayerId);
+  }
+
+  public SimpleIntegerProperty playerTablePlayerIdProperty() {
+    return playerTablePlayerId;
   }
 
   public String getPlayerTableFirstName() {
     return playerTableFirstName.get();
   }
 
-  public SimpleStringProperty playerTableFirstNameProperty() {
-    return playerTableFirstName;
-  }
-
   public void setPlayerTableFirstName(String playerTableFirstName) {
     this.playerTableFirstName.set(playerTableFirstName);
+  }
+
+  public SimpleStringProperty playerTableFirstNameProperty() {
+    return playerTableFirstName;
   }
 
   public String getPlayerTableLastName() {
     return playerTableLastName.get();
   }
 
-  public SimpleStringProperty playerTableLastNameProperty() {
-    return playerTableLastName;
-  }
-
   public void setPlayerTableLastName(String playerTableLastName) {
     this.playerTableLastName.set(playerTableLastName);
+  }
+
+  public SimpleStringProperty playerTableLastNameProperty() {
+    return playerTableLastName;
   }
 
   public int getPlayerTablePhoneNumber() {
     return playerTablePhoneNumber.get();
   }
 
-  public SimpleIntegerProperty playerTablePhoneNumberProperty() {
-    return playerTablePhoneNumber;
-  }
-
   public void setPlayerTablePhoneNumber(int playerTablePhoneNumber) {
     this.playerTablePhoneNumber.set(playerTablePhoneNumber);
+  }
+
+  public SimpleIntegerProperty playerTablePhoneNumberProperty() {
+    return playerTablePhoneNumber;
   }
 }

@@ -1,6 +1,8 @@
 package com.example.playerandgames.database;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 
 // This code is for establishing connection with MySQL
 // database and retrieving data
@@ -24,8 +26,7 @@ public class DBConnection {
     return con;
   }
 
-  public void setConnection() throws Exception
-  {
+  public void setConnection() throws Exception {
     String url
       = "jdbc:postgresql://localhost:5432/playersgames"; // table details
     String username = "postgres"; // MySQL credentials

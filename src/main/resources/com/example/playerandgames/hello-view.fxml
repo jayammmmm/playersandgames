@@ -3,9 +3,7 @@
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.collections.*?>
 
-<?import java.util.List?>
 <HBox xmlns:fx="http://javafx.com/fxml"
       fx:controller="com.example.playerandgames.PlayerGameController">
 
@@ -17,7 +15,7 @@
             <Label text="Game Title:"
                    GridPane.columnIndex="0" GridPane.rowIndex="1"/>
 
-            <TextField fx:id="gameTitle"
+            <TextField fx:id="gameTitle" promptText="Enter Game Title to Add"
                        GridPane.columnIndex="1" GridPane.rowIndex="1"/>
 
             <Label fx:id="gameAdded"
@@ -35,7 +33,7 @@
             <Label text="First Name:"
                    GridPane.columnIndex="0" GridPane.rowIndex="1"/>
 
-            <TextField fx:id="firstName"
+            <TextField fx:id="firstName" promptText="Enter First Name"
                        GridPane.columnIndex="1" GridPane.rowIndex="1"/>
 
             <TextField fx:id="playerId" promptText="Enter player id to edit"
@@ -48,13 +46,13 @@
             <Label text="Last Name:"
                    GridPane.columnIndex="0" GridPane.rowIndex="2"/>
 
-            <TextField fx:id="lastName"
+            <TextField fx:id="lastName" promptText="Enter Last Name"
                        GridPane.columnIndex="1" GridPane.rowIndex="2"/>
 
             <Label text="Address:"
                    GridPane.columnIndex="0" GridPane.rowIndex="3"/>
 
-            <TextField fx:id="address"
+            <TextField fx:id="address" promptText="Enter Address"
                        minHeight="50"
                        GridPane.columnIndex="1" GridPane.rowIndex="3"/>
 
@@ -64,19 +62,19 @@
             <Label text="Postal Code:"
                    GridPane.columnIndex="0" GridPane.rowIndex="4"/>
 
-            <TextField fx:id="postalCode"
+            <TextField fx:id="postalCode" promptText="Enter Postal Code"
                        GridPane.columnIndex="1" GridPane.rowIndex="4"/>
 
             <Label text="Province:"
                    GridPane.columnIndex="0" GridPane.rowIndex="5"/>
 
-            <TextField fx:id="province"
+            <TextField fx:id="province" promptText="Enter Province"
                        GridPane.columnIndex="1" GridPane.rowIndex="5"/>
 
             <Label text="Phone Number:"
                    GridPane.columnIndex="0" GridPane.rowIndex="6"/>
 
-            <TextField fx:id="phoneNumber"
+            <TextField fx:id="phoneNumber" promptText="Enter Phone no."
                        GridPane.columnIndex="1" GridPane.rowIndex="6"/>
 
             <Button text="Add Player"
@@ -94,25 +92,25 @@
             <Label text="Game ID"
                    GridPane.columnIndex="0" GridPane.rowIndex="1"/>
 
-            <TextField fx:id="gameId"
+            <TextField fx:id="gameId" promptText="Enter Game ID"
                        GridPane.columnIndex="0" GridPane.rowIndex="2"/>
 
             <Label text="Player ID"
                    GridPane.columnIndex="1" GridPane.rowIndex="1"/>
 
-            <TextField fx:id="playerrId"
+            <TextField fx:id="playerrId"  promptText="Enter Player ID"
                        GridPane.columnIndex="1" GridPane.rowIndex="2"/>
 
             <Label text="Score"
                    GridPane.columnIndex="2" GridPane.rowIndex="1"/>
 
-            <TextField fx:id="score"
+            <TextField fx:id="score" promptText="Enter Score"
                        GridPane.columnIndex="2" GridPane.rowIndex="2"/>
 
             <Label text="Date"
                    GridPane.columnIndex="3" GridPane.rowIndex="1"/>
 
-            <TextField fx:id="datePlayed"
+            <TextField fx:id="datePlayed" promptText="Enter Date yyyy-mm-dd"
                        GridPane.columnIndex="3" GridPane.rowIndex="2"/>
 
             <Button text="Add game details"
@@ -130,7 +128,7 @@
                GridPane.columnIndex="0" GridPane.rowIndex="0">
         </Label>
 
-        <TextField fx:id="playerGameId"
+        <TextField fx:id="playerGameId" promptText="Enter player id to search"
                    GridPane.columnIndex="1" GridPane.rowIndex="0"/>
 
         <Button text="Get PlayerGames"
@@ -208,5 +206,4 @@
             </TableView>
         </GridPane>
     </VBox>
-
 </HBox>

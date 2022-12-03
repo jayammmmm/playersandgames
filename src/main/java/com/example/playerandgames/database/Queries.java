@@ -55,7 +55,7 @@ public class Queries {
 
     String insertGameQuery = "INSERT INTO game (game_title) values(?)";
     PreparedStatement statement = DBConnection.con.prepareStatement(insertGameQuery);
-    statement.setString(1,game.getGame_title());
+    statement.setString(1, game.getGame_title());
     statement.execute();
 
     System.out.println("Game data inserted into table.");
