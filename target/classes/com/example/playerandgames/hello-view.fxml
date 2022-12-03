@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.*?>
+
+<?import java.util.List?>
+<HBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.playerandgames.HelloController">
+
+    <VBox>
+        <GridPane
+                alignment="CENTER_LEFT" hgap="10" vgap="10">
+            <padding><Insets top="25" right="25" bottom="10" left="25"/></padding>
+
+            <Label text="Game Title:"
+                   GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+
+            <TextField fx:id="gameTitle"
+                       GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+            <Label fx:id="gameAdded"
+                   GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+
+            <Button text="Add Game"
+                    GridPane.columnIndex="1" GridPane.rowIndex="2"
+                    onAction="#onCreateGameButtonClick"/>
+        </GridPane>
+
+        <GridPane
+                alignment="CENTER_LEFT" hgap="10" vgap="10">
+            <padding><Insets top="25" right="25" bottom="10" left="25"/></padding>
+
+            <Label text="First Name:"
+                   GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+
+            <TextField fx:id="firstName"
+                       GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+            <TextField fx:id="playerId" promptText="Enter player id to edit"
+                       GridPane.columnIndex="2" GridPane.rowIndex="1">
+            </TextField>
+            <Button text="Get Player"
+                    GridPane.columnIndex="3" GridPane.rowIndex="1"
+                    onAction="#onGetPlayerButtonClicked"/>
+
+            <Label text="Last Name:"
+                   GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+
+            <TextField fx:id="lastName"
+                       GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+            <Label text="Address:"
+                   GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+
+            <TextField fx:id="address"
+                       minHeight="50"
+                       GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+
+            <Label fx:id="playerAdded"
+                   GridPane.columnIndex="2" GridPane.rowIndex="3"/>
+
+            <Label text="Postal Code:"
+                   GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+
+            <TextField fx:id="postalCode"
+                       GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+
+            <Label text="Province:"
+                   GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+
+            <TextField fx:id="province"
+                       GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+
+            <Label text="Phone Number:"
+                   GridPane.columnIndex="0" GridPane.rowIndex="6"/>
+
+            <TextField fx:id="phoneNumber"
+                       GridPane.columnIndex="1" GridPane.rowIndex="6"/>
+
+            <Button text="Add Player"
+                    GridPane.columnIndex="1" GridPane.rowIndex="7"
+                    onAction="#onAddPlayerButtonClick"/>
+            <Button text="Update Player"
+                    GridPane.columnIndex="2" GridPane.rowIndex="7"
+                    onAction="#onUpdatePlayerButtonClicked"/>
+        </GridPane>
+
+        <GridPane
+                alignment="CENTER_LEFT" hgap="10" vgap="10">
+            <padding><Insets top="25" right="25" bottom="10" left="25"/></padding>
+
+            <Label text="Game ID"
+                   GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+
+            <TextField fx:id="gameId"
+                       GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+
+            <Label text="Player ID"
+                   GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+            <TextField fx:id="playerrId"
+                       GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+            <Label text="Score"
+                   GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+
+            <TextField fx:id="score"
+                       GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+
+            <Label text="Date"
+                   GridPane.columnIndex="3" GridPane.rowIndex="1"/>
+
+            <TextField fx:id="datePlayed"
+                       GridPane.columnIndex="3" GridPane.rowIndex="2"/>
+
+            <Button text="Add game details"
+                    GridPane.columnIndex="1" GridPane.rowIndex="3"
+                    onAction="#onPlayerGameButtonClick"/>
+            <Label fx:id="gameDetailsAdded"
+                   GridPane.columnIndex="2" GridPane.rowIndex="3"/>
+        </GridPane>
+
+        <GridPane alignment="CENTER_LEFT" hgap="10.0" vgap="10.0" minWidth="600">
+        <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+        </padding>
+        <Label style="-fx-font: NORMAL 20 Tahoma;" text="Player and Game Details"
+               GridPane.columnIndex="0" GridPane.rowIndex="0">
+        </Label>
+
+        <TextField fx:id="playerGameId"
+                   GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+        <Button text="Get PlayerGames"
+                GridPane.columnIndex="2" GridPane.rowIndex="0"
+                onAction="#onGetAllPlayerGamesClick"/>
+        </GridPane>
+
+        <GridPane alignment="CENTER_LEFT" hgap="10.0" vgap="10.0" minWidth="600">
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+            </padding>
+            <TableView fx:id="playerGameDetailTable" GridPane.columnIndex="0"
+                       GridPane.rowIndex="1">
+                <columns>
+                    <TableColumn fx:id="playerGameTableFirstName" text="First Name">
+                    </TableColumn>
+                    <TableColumn fx:id="playerGameTableLastName" text="Last Name">
+                    </TableColumn>
+                    <TableColumn fx:id="playerGameTableGamePlayed" text="Game Played">
+                    </TableColumn>
+                    <TableColumn fx:id="playerGameTableScore" text="Score">
+                    </TableColumn>
+                    <TableColumn fx:id="playerGameTablePlayedOn" text="Played On">
+                    </TableColumn>
+                </columns>
+            </TableView>
+        </GridPane>
+    </VBox>
+    <VBox>
+        <GridPane alignment="CENTER_LEFT" hgap="10.0" vgap="10.0" minWidth="600">
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+            </padding>
+            <Label style="-fx-font: NORMAL 20 Tahoma;" text="Game List"
+                   GridPane.columnIndex="0" GridPane.rowIndex="0">
+            </Label>
+
+            <Button text="Get All Games"
+                    GridPane.columnIndex="1" GridPane.rowIndex="0"
+                    onAction="#onGetAllGamesClick"/>
+            <TableView fx:id="gameTableView" GridPane.columnIndex="0"
+                       GridPane.rowIndex="1">
+                <columns>
+                    <TableColumn fx:id="gameTableId" text="Game ID">
+                    </TableColumn>
+                    <TableColumn fx:id="gameTableTile" text="Game Title">
+                    </TableColumn>
+                </columns>
+            </TableView>
+        </GridPane>
+
+        <GridPane alignment="CENTER_LEFT" hgap="10.0" vgap="10.0" minWidth="600">
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+            </padding>
+            <Label style="-fx-font: NORMAL 20 Tahoma;" text="Player List"
+                   GridPane.columnIndex="0" GridPane.rowIndex="0">
+            </Label>
+
+            <Button text="Get All Player"
+                    GridPane.columnIndex="1" GridPane.rowIndex="0"
+                    onAction="#onGetAllPlayersClick"/>
+            <TableView fx:id="playerTableView" GridPane.columnIndex="0"
+                       GridPane.rowIndex="1">
+                <columns>
+                    <TableColumn fx:id="playerTablePlayerId" text="Player ID">
+                    </TableColumn>
+                    <TableColumn fx:id="playerTableFirstName" text="First Name">
+                    </TableColumn>
+                    <TableColumn fx:id="playerTableLastName" text="Last Name">
+                    </TableColumn>
+                    <TableColumn fx:id="playerTablePhoneNumber" text="Phone Number">
+                    </TableColumn>
+                </columns>
+            </TableView>
+        </GridPane>
+    </VBox>
+
+</HBox>
