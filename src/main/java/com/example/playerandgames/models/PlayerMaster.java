@@ -1,6 +1,7 @@
 package com.example.playerandgames.models;
 
 import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleLongProperty;
 import javafx.beans.property.SimpleStringProperty;
 
 public class PlayerMaster {
@@ -8,7 +9,7 @@ public class PlayerMaster {
   public SimpleIntegerProperty playerTablePlayerId = new SimpleIntegerProperty();
   public SimpleStringProperty playerTableFirstName = new SimpleStringProperty();
   public SimpleStringProperty playerTableLastName = new SimpleStringProperty();
-  public SimpleIntegerProperty playerTablePhoneNumber = new SimpleIntegerProperty();
+  public SimpleLongProperty playerTablePhoneNumber = new SimpleLongProperty();
 
   public int getPlayerTablePlayerId() {
     return playerTablePlayerId.get();
@@ -46,15 +47,15 @@ public class PlayerMaster {
     return playerTableLastName;
   }
 
-  public int getPlayerTablePhoneNumber() {
+  public long getPlayerTablePhoneNumber() {
     return playerTablePhoneNumber.get();
   }
 
-  public void setPlayerTablePhoneNumber(int playerTablePhoneNumber) {
+  public void setPlayerTablePhoneNumber(long playerTablePhoneNumber) {
     this.playerTablePhoneNumber.set(playerTablePhoneNumber);
   }
 
-  public SimpleIntegerProperty playerTablePhoneNumberProperty() {
+  public SimpleLongProperty playerTablePhoneNumberProperty() {
     return playerTablePhoneNumber;
   }
 }

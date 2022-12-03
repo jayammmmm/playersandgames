@@ -74,7 +74,7 @@ public class Queries {
     statement.setString(3, player.getAddress());
     statement.setString(4, player.getPostal_code());
     statement.setString(5, player.getProvince());
-    statement.setInt(6, player.getPhone_number());
+    statement.setLong(6, player.getPhone_number());
     statement.execute();
 
     System.out.println("Player data inserted into table.");
@@ -185,7 +185,7 @@ public class Queries {
       player.setPostal_code(result.getString("postal_code"));
       player.setProvince(result.getString("province"));
       player.setPlayer_id(result.getInt("player_id"));
-      player.setPhone_number(result.getInt("phone_number"));
+      player.setPhone_number(result.getLong("phone_number"));
       players.add(player);
     }
     return players;
@@ -204,7 +204,7 @@ public class Queries {
       player.setPostal_code(result.getString("postal_code"));
       player.setProvince(result.getString("province"));
       player.setPlayer_id(result.getInt("player_id"));
-      player.setPhone_number(result.getInt("phone_number"));
+      player.setPhone_number(result.getLong("phone_number"));
     }
     return player;
   }
@@ -225,7 +225,7 @@ public class Queries {
     statement.setString(3, player.getAddress());
     statement.setString(4, player.getPostal_code());
     statement.setString(5, player.getProvince());
-    statement.setInt(6, player.getPhone_number());
+    statement.setLong(6, player.getPhone_number());
     statement.setInt(7, player.getPlayer_id());
     statement.execute();
     System.out.println("Player updated.");

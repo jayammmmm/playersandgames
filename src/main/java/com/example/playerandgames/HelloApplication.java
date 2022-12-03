@@ -14,7 +14,7 @@ public class HelloApplication extends Application {
 //    launch();
     DBConnection conn = new DBConnection();
     conn.setConnection();
-    Queries.createTables();
+//    Queries.createTables();
     launch();
   }
 

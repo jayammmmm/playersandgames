@@ -96,7 +96,7 @@ public class PlayerGameController {
     player.setLast_name(lastName.getText());
     player.setPostal_code(postalCode.getText());
     player.setProvince(province.getText());
-    player.setPhone_number(Integer.parseInt(phoneNumber.getText()));
+    player.setPhone_number(Long.parseLong(phoneNumber.getText()));
     Queries.insertPlayerData(player);
     playerAdded.setText("Player added successfully!!!");
     clearPlayerFields();
@@ -143,7 +143,7 @@ public class PlayerGameController {
     player.setLast_name(lastName.getText());
     player.setPostal_code(postalCode.getText());
     player.setProvince(province.getText());
-    player.setPhone_number(Integer.parseInt(phoneNumber.getText()));
+    player.setPhone_number(Long.parseLong(phoneNumber.getText()));
     player.setPlayer_id(Integer.parseInt(playerId.getText()));
     Queries.updatePlayer(player);
     playerAdded.setText("Player updated successfully!!!");
