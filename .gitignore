@@ -1,0 +1,55 @@
+### BLACK LISTED TYPES #####################################################
+### There are MANY more file types you should exclude                    ###
+#### (i.e. http://git.mocha.macys.net/B004455/how-to-build-a-gitignore-file/raw/master/.gitignore)
+### but these are the bare minimum and are blacklisted at a global level ###
+### Your push will FAIL if you attempt to push these types               ###
+### and do not have them in your project level gitignore                 ###
+### When this is attempted, you will get the error message below         ###
+#blacklisted by the pattern  
+#(zip|tar|rar|gz|jar|war|ear|iso|exe|log|dll|class|com|tmp|bak|Thumbs.db|
+# desktop.ini|doc|docx|xls|xlsx|xlsb|pptx)
+*.zip
+*.tar
+*.rar
+*.gz
+*.jar
+*.war
+*.ear
+*.iso
+*.exe
+*.log
+*.dll
+*.class
+*.com
+*.tmp
+*.bak
+Thumbs.db
+desktop.ini
+*.doc
+*.docx
+*.xls
+*.xlsx
+*.xlsb
+*.pptx
+*.iml
+
+
+### IntelliJ Specific files
+.idea/*
+out/
+.idea_modules/
+.DS_Store
+
+### Maven ###
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+mvnw
+mvnw.cmd
+############################################################################
