@@ -87,12 +87,6 @@ public class PlayerGameController {
   private TextField phoneNumber;
   @FXML
   private TextField gameTitle;
-  @FXML
-  private ObservableList playerIds = FXCollections
-    .observableArrayList(Queries.getAllPlayerIds());
-
-  public PlayerGameController() throws SQLException {
-  }
 
   @FXML
   protected void onAddPlayerButtonClick(ActionEvent actionEvent) throws SQLException {

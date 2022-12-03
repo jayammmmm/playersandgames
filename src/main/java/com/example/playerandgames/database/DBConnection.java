@@ -28,10 +28,10 @@ public class DBConnection {
 
   public void setConnection() throws Exception {
     String url
-      = "jdbc:postgresql://localhost:5432/playersgames"; // table details
-    String username = "postgres"; // MySQL credentials
-    String password = "root";
-    Class.forName("org.postgresql.Driver"); // Driver name
+      = "jdbc:oracle:thin:@199.212.26.208:1521/sqld"; // table details
+    String username = "COMP228_F22_om_15"; // MySQL credentials
+    String password = "password";
+    Class.forName("oracle.jdbc.driver.OracleDriver");; // Driver name
     this.con = DriverManager.getConnection(
       url, username, password);
     System.out.println(
